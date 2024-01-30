@@ -30,8 +30,7 @@ module "s3" {
   app_name            = var.app_name
   app_environment     = var.app_environment
   source              = "./modules/s3"
-  cloudfront-oai-arn  = module.cloudfront.cloudfront_origin_access_identity_oai_iam_arn
-}
+ }
 
 #ECS Resources
 module "ecs" {
@@ -41,7 +40,6 @@ module "ecs" {
   vpc_id              = module.vpc.vpc_id
   private_subnet_1_id = module.vpc.private_subnet_1_id
   private_subnet_2_id = module.vpc.private_subnet_2_id
-  alb-ecs-tg          = module.alb.alb-ecs-tg
 }
 
 
