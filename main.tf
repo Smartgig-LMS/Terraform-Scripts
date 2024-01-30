@@ -37,7 +37,6 @@ module "ecs" {
   app_name            = var.app_name
   app_environment     = var.app_environment
   source              = "./modules/ecs"
-  vpc_id              = module.vpc.vpc_id
   private_subnet_1_id = module.vpc.private_subnet_1_id
   private_subnet_2_id = module.vpc.private_subnet_2_id
 }
