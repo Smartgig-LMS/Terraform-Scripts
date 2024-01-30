@@ -1,5 +1,5 @@
 variable "app_name" {}
 variable "app_environment" {}
 variable "bucket_name" {
-  default     = "gtvi-cloud-front-s3"
+  default     = "smartgig-2222-s3"
 }
