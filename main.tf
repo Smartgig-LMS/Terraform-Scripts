@@ -28,7 +28,6 @@ module "ec2" {
 #S3 Resources
 module "s3" {
   app_name            = var.app_name
-  vpc_id              = var.vpc_id  
   app_environment     = var.app_environment
   source              = "./modules/s3"
  }
