@@ -17,7 +17,6 @@
 #EC2 Resources
 module "ec2" {
   app_name            = var.app_name
-  vpc_id              = var.vpc_id
   app_environment     = var.app_environment
   source              = "./modules/ec2"
   private_subnet_1_id  = "subnet-0dfe667b866c7f21d"
