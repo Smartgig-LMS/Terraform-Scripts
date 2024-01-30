@@ -44,12 +44,4 @@ resource "aws_ecs_service" "ecs-svc" {
     assign_public_ip = true
   }
 
-   load_balancer {
-     target_group_arn = var.alb-ecs-tg.arn
-     container_name   = var.container_name
-     container_port   = var.alb-container_port
-   }
-depends_on = [
-  var.alb-ecs-tg
- ]
 }
