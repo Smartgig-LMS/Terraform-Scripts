@@ -5,21 +5,12 @@
    app_name            = var.app_name
    app_environment     = var.app_environment
    source              = "./modules/vpc"
-<<<<<<< HEAD
    vpc_cidr            = "20.0.0.0/16"
    subnet_azs          = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
    private_subnet_name = ["private_subnet_1a", "private_subnet_1b", "private_subnet_1c"]
    private_subnet_cidr = ["20.0.4.0/24", "20.0.5.0/24", "20.0.6.0/24"]
    public_subnet_name  = ["public_subnet_1a", "public_subnet_1b", "public_subnet_1c"]
    public_subnet_cidr  = ["20.0.1.0/24", "20.0.2.0/24", "20.0.3.0/24"]
-=======
-   vpc_cidr            = "10.0.0.0/16"
-   subnet_azs          = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
-   private_subnet_name = ["private_subnet_1a", "private_subnet_1b", "private_subnet_1c"]
-   private_subnet_cidr = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
-   public_subnet_name  = ["public_subnet_1a", "public_subnet_1b", "public_subnet_1c"]
-   public_subnet_cidr  = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
->>>>>>> 73292ef965b99a03dd258fb68cdb4186e3b2d15d
 
  }
 
@@ -35,19 +26,11 @@
  }
 
 #S3 Resources
-<<<<<<< HEAD
  module "s3" {
    app_name            = var.app_name
    app_environment     = var.app_environment
    source              = "./modules/s3"
 }
-=======
-module "s3" {
-  app_name            = var.app_name
-  app_environment     = var.app_environment
-  source              = "./modules/s3"
- }
->>>>>>> 73292ef965b99a03dd258fb68cdb4186e3b2d15d
 
 #ECS Resources
 module "ecs" {
