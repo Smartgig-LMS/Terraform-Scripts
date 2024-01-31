@@ -29,6 +29,7 @@ resource "aws_instance" "ec2" {
  ami                    = var.ec2-ami
  instance_type          = var.ec2-instancetype
  subnet_id              = var.private_subnet_1_id
+ #subnet_id =  subnet-0ca5f4b2a43445b1a
  iam_instance_profile   = aws_iam_instance_profile.resources-iam-profile.name 
 root_block_device {
 delete_on_termination = true

@@ -8,12 +8,6 @@ resource "aws_s3_bucket" "bucket" {
   }
 }
 
-# create bucket ACL :
-resource "aws_s3_bucket_acl" "bucket_acl" {
-  bucket = aws_s3_bucket.bucket.id
-  acl    = "private"
-}
-
 # block public access :
 resource "aws_s3_bucket_public_access_block" "public_block" {
   bucket = aws_s3_bucket.bucket.id
@@ -36,10 +30,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encrypt" {
 }
 
 # add bucket policy to let the CloudFront OAI get objects:
-resource "aws_s3_bucket_policy" "bucket_policy" {
-  bucket = aws_s3_bucket.bucket.id
-  policy = data.aws_iam_policy_document.bucket_policy_document.json
-}
+
 
 # create S3 website hosting:
 resource "aws_s3_bucket_website_configuration" "website" {

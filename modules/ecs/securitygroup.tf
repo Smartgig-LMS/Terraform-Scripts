@@ -1,6 +1,7 @@
 resource "aws_security_group" "ecs-sg" {
-  name   = "${var.app_name}-ecs-sg"
-  vpc_id = var.vpc_id
+  name        = "${var.app_name}-vpc"
+  #vpc_id = var.vpc_id
+  vpc_id = "vpc-0ca732e0086009e56"
 
   ingress {
     protocol         = "tcp"

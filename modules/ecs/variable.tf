@@ -3,7 +3,6 @@ variable "app_environment" {}
 variable "private_subnet_1_id" {}
 variable "private_subnet_2_id" {}
 variable "vpc_id" {}
-variable "alb-ecs-tg" {}
 variable "cpu" {
     default = "256" # mega-bytes
 }

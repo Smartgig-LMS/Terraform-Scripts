@@ -1,6 +1,6 @@
 variable "vpc_name" {
 
-  default = "smart-vpc-dev"
+  default = "smart-vpc"
 }
 variable "region" {
 
@@ -8,13 +8,13 @@ variable "region" {
 }
 variable "app_name" {
 
-  default = "smart"
+  default = "smartgig"
 }
 variable "app_environment" {
 
-  default = "Prod"
+  default = "Dev"
 }
 variable "vpc_id" {
 
-  default = "Prod"
+  default = ""
 }

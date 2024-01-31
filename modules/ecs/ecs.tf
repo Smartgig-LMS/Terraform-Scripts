@@ -40,16 +40,9 @@ resource "aws_ecs_service" "ecs-svc" {
 
   network_configuration {
     security_groups  = [aws_security_group.ecs-sg.id]
-    subnets          = [var.private_subnet_1_id, var.private_subnet_2_id]
+    #subnets = "subnet-051a4549734af27e8"
+    subnets          = ["subnet-051a4549734af27e8"]
     assign_public_ip = true
   }
 
-   load_balancer {
-     target_group_arn = var.alb-ecs-tg.arn
-     container_name   = var.container_name
-     container_port   = var.alb-container_port
-   }
-depends_on = [
-  var.alb-ecs-tg
- ]
 }
